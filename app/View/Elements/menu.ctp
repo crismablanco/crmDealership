@@ -172,9 +172,8 @@ echo $this->Html->link('CRM ', array('controller'=>'pages','action'=>'index'),ar
              </div>
         </li>
         <li>
-        <i class="fa fa-power-off"></i>
             <?php 
-                echo $this->Html->link('Logout', array('controller'=>'users','action'=>'logout','class'=>'fa fa-power-off'));
+                echo $this->Html->link('Logout', array('controller'=>'users','action'=>'logout'));
             ?>
         </li>
       </ul>
