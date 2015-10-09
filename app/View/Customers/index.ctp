@@ -1,5 +1,9 @@
 <div class="customers index">
-	<h2><?php echo __('Customers'); ?></h2>
+	<h2>
+
+		<?php echo $this->Html->link(__('Add'), array('action' => 'add'), array('class'=>'btn btn-md btn-success')); ?>&nbsp;&nbsp;
+		<?php echo __('Customers'); ?>
+	</h2>
 	<table class="table" cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -45,15 +49,4 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Customer'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Status customers'), array('controller' => 'statuscustomers', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Lead Sources'), array('controller' => 'leadsources', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Financing Sources'), array('controller' => 'financingsources', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Sales'), array('controller' => 'sales', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sale'), array('controller' => 'sales', 'action' => 'add')); ?> </li>
-	</ul>
 </div>

@@ -22,16 +22,6 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Financing'), array('action' => 'edit', $financingsource['Financingsource']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Financing'), array('action' => 'delete', $financingsource['Financingsource']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $financingsource['Financingsource']['name']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Financing'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Financing'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Customers'), array('controller' => 'customers', 'action' => 'index')); ?> </li>
-	</ul>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Customers'); ?></h3>
 	<?php if (!empty($financingsource['Customer'])): ?>
@@ -55,9 +45,4 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Customer'), array('controller' => 'customers', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

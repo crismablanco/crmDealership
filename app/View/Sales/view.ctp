@@ -43,13 +43,3 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Sale'), array('action' => 'edit', $sale['Sale']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Sale'), array('action' => 'delete', $sale['Sale']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $sale['Sale']['id']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Sales'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sale'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Customers'), array('controller' => 'customers', 'action' => 'index')); ?> </li>
-	</ul>
-</div>

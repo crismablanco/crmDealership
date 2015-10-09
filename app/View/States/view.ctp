@@ -31,19 +31,8 @@
 
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit State'), array('action' => 'edit', $state['State']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete State'), array('action' => 'delete', $state['State']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $state['State']['name']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List States'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New State'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Countries'), array('controller' => 'countris', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Country'), array('controller' => 'countris', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cities'), array('controller' => 'citis', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New City'), array('controller' => 'citis', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+
+
 <div class="related">
 	<h3><?php echo __('Related Cities'); ?></h3>
 	<?php if (!empty($state['Citi'])): ?>
@@ -73,9 +62,4 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New City'), array('controller' => 'citis', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

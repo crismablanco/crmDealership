@@ -1,5 +1,5 @@
 <div class="emailshedules index">
-	<h2><?php echo __('Emailshedules'); ?></h2>
+	<h2><?php echo $this->Html->link(__('Add'), array('action' => 'add'), array('class'=>'btn btn-md btn-success')); ?>&nbsp;&nbsp;<?php echo __('Emailshedules'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -51,12 +51,4 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Emailshedule'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Emailtemplates'), array('controller' => 'emailtemplates', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Emailtemplate'), array('controller' => 'emailtemplates', 'action' => 'add')); ?> </li>
-	</ul>
 </div>

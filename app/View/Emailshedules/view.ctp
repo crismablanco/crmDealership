@@ -48,14 +48,3 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Emailshedule'), array('action' => 'edit', $emailshedule['Emailshedule']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Emailshedule'), array('action' => 'delete', $emailshedule['Emailshedule']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $emailshedule['Emailshedule']['id']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Emailshedules'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Emailshedule'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Emailtemplates'), array('controller' => 'emailtemplates', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Emailtemplate'), array('controller' => 'emailtemplates', 'action' => 'add')); ?> </li>
-	</ul>
-</div>

@@ -81,14 +81,3 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Customer'), array('action' => 'edit', $customer['Customer']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Customer'), array('action' => 'delete', $customer['Customer']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $customer['Customer']['id']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Customers'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Customer'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Sales'), array('controller' => 'sales', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sale'), array('controller' => 'sales', 'action' => 'add', $customer['Customer']['id'])); ?> </li>
-	</ul>
-</div>

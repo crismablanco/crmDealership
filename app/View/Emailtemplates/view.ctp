@@ -26,12 +26,3 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Template'), array('action' => 'edit', $emailtemplate['Emailtemplate']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Template'), array('action' => 'delete', $emailtemplate['Emailtemplate']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $emailtemplate['Emailtemplate']['name']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Templates'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Template'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>

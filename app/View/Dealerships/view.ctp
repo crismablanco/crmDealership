@@ -49,17 +49,6 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Dealership'), array('action' => 'edit', $dealership['Dealership']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Dealership'), array('action' => 'delete', $dealership['Dealership']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $dealership['Dealership']['name']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Dealerships'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Dealership'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add',$dealership['Dealership']['id'])); ?> </li>
-	</ul>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Users'); ?></h3>
 	<?php if (!empty($dealership['User'])): ?>
@@ -85,9 +74,4 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

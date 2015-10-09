@@ -22,15 +22,7 @@
 
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Lead Source'), array('action' => 'edit', $leadsource['Leadsource']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Lead Source'), array('action' => 'delete', $leadsource['Leadsource']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $leadsource['Leadsource']['name']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Lead Sources'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Lead Source'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+
 <div class="related">
 	<h3><?php echo __('Related Customers'); ?></h3>
 	<?php if (!empty($leadsource['Customer'])): ?>
@@ -54,9 +46,5 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Customer'), array('controller' => 'customers', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
+	
 </div>

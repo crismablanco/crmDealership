@@ -29,14 +29,3 @@
 	</table>
 
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit City'), array('action' => 'edit', $citi['Citi']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete City'), array('action' => 'delete', $citi['Citi']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $citi['Citi']['id']))); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cities'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New City'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List States'), array('controller' => 'states', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New State'), array('controller' => 'states', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
