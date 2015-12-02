@@ -11,7 +11,12 @@
 		echo '<strong>Status customer</strong><br>'.$this->Form->input('statuscustomer_id');
 		echo '<strong>Lead Source</strong><br>'.$this->Form->input('leadsource_id');
 		echo '<strong>Financing Source</strong><br>'.$this->Form->input('financingsource_id');
-		echo '<strong>User Sales</strong><br>'.$this->Form->input('user_id');
+    if ($current_user['role']=='sale' || $current_user['role']=='finance') {
+      $option = array('disabled'=>'disabled');
+    }else {
+      $option = array('disabled'=>'');
+    }
+		echo '<strong>User Sales</strong><br>'.$this->Form->input('user_id',$option);
 		echo '<strong>First Name</strong><br>'.$this->Form->input('first_name');
 		echo '<strong>Last Name</strong><br>'.$this->Form->input('last_name');
 		echo '<strong>email</strong><br>'.$this->Form->input('email');

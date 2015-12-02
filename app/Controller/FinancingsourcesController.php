@@ -15,6 +15,29 @@ class FinancingsourcesController extends AppController {
  */
 	public $components = array('Paginator', 'Flash');
 
+
+	public function beforeFilter()
+	{
+		parent::beforeFilter();
+		//$this->Auth->allow('add');
+	}
+
+
+	public function isAuthorized($user)
+	{
+		//permisos para SALEMANAGER - FINANCE USER
+		if ($user['role'] == 'salemanager' || $user['role'] == 'finance') {
+			if (in_array($this->action, array('edit', 'index', 'view','add','delete'))) {
+				return true;
+			}else{
+				
+					$this->Flash->error('You can not access here!');
+					$this->redirect($this->Auth->redirect());
+			}
+		}
+
+		return parent::isAuthorized($user);
+	}
 /**
  * index method
  *

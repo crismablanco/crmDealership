@@ -1,3 +1,6 @@
+<?php
+//debug($customers);
+ ?>
 <div class="customers index">
 	<h2>
 
@@ -18,6 +21,11 @@
 	</thead>
 	<tbody>
 	<?php foreach ($customers as $customer): ?>
+		<?php
+      //va a mostrar los clientes propios del dealership a que pertenezca el usuario logueado.
+      // Si el user es ADMIN, muestra todos los clientes sin importar a qué usuario estén asociados. Tampoco importa el dealership
+			if ((($current_user['role']!='admin') && ($customer['User']['dealership_id']==$current_user['dealership_id'])) || ($current_user['role']=='admin')) {
+		 ?>
 	<tr>
 		<td><?php echo h($customer['Customer']['id']); ?>&nbsp;</td>
 		<td>
@@ -33,6 +41,7 @@
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $customer['Customer']['id']), array('class'=>'btn btn-xs btn-danger'), __('Are you sure you want to delete # %s?', $customer['Customer']['id'])); ?>
 		</td>
 	</tr>
+	<?php } ?>
 <?php endforeach; ?>
 	</tbody>
 	</table>

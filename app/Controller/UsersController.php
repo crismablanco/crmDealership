@@ -21,6 +21,22 @@ class UsersController extends AppController {
 		$this->Auth->allow('add');
 	}
 
+
+	public function isAuthorized($user)
+	{
+		if ($user['role'] == 'sale') {
+			if (in_array($this->action, array('edit', 'index'))) {
+				return true;
+			}else{
+				if ($this->Auth->user('id')) {
+					$this->Flash->error('You can not access here!');
+					$this->redirect($this->Auth->redirect());
+				}
+			}
+		}
+		return parent::isAuthorized($user);
+	}
+
 	public function login()
 	{
 		if ($this->request->is('post')) {
@@ -35,7 +51,7 @@ class UsersController extends AppController {
 	{
 		return $this->redirect($this->Auth->logout());
 	}
-	
+
 /**
  * index method
  *

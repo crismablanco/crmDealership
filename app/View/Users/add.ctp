@@ -10,7 +10,7 @@
 		echo $this->Form->input('email');
 
 
-		$roles = array('admin' => 'Administrator', 'sale' => 'Sales', 'finance' => 'Finance Manager', 'saleman'=>'Sales Manager');
+		$roles = array('sale' => 'Sales', 'finance' => 'Finance Manager', 'saleman'=>'Sales Manager');
 		echo $this->Form->input(
 		    'role',
 		    array('options' => $roles, 'default' => 'sale')

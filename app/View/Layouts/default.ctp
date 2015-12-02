@@ -47,8 +47,9 @@ $cakeVersion = __d('cake_dev', ' %s', Configure::version())
 	<?php 
     if (isset($current_user)) {
     	echo $this->element('menu');
+    	debug($current_user);
     }
-    //debug($current_user);
+
      ?>
 	<div id="wrapper">
 
@@ -65,7 +66,6 @@ $cakeVersion = __d('cake_dev', ' %s', Configure::version())
 
     </div>
     <!-- /#page-wrapper -->
-
 	</div>
 <!-- /#wrapper -->
 
