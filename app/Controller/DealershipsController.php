@@ -19,6 +19,23 @@ class DealershipsController extends AppController {
  */
 	public $components = array('Paginator', 'Flash');
 
+
+		public function beforeFilter()
+		{
+			parent::beforeFilter();
+			//$this->Auth->allow('add');
+		}
+
+
+		public function isAuthorized($user)
+		{
+			if ($user['role'] != 'admin') {
+						$this->Flash->error('You can not access here!');
+						$this->redirect($this->Auth->redirect());
+			}
+
+			return parent::isAuthorized($user);
+		}
 /**
  * index method
  *

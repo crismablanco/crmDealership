@@ -102,7 +102,7 @@ class CustomersController extends AppController {
 					$this->Flash->error(__('You have not Permission on this action.'));
 					return $this->redirect(array('action'=>'index'));
 				}else {
-					echo "string";
+					//echo "string";
 				}
 				break;
 

@@ -10,7 +10,12 @@
 		echo $this->Form->input('email');
 
 
-		$roles = array('sale' => 'Sales', 'finance' => 'Finance Manager', 'saleman'=>'Sales Manager');
+		if ($current_user['role']=='admin') {
+			$roles = array('sale' => 'Sales', 'finance' => 'Finance Manager', 'saleman'=>'Sales Manager',  'admin'=>'System Administrator');
+		}else {
+			$roles = array('sale' => 'Sales', 'finance' => 'Finance Manager', 'saleman'=>'Sales Manager');
+		}
+
 		echo $this->Form->input(
 		    'role',
 		    array('options' => $roles, 'default' => 'sale')

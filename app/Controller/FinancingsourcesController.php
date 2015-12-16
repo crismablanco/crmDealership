@@ -29,11 +29,10 @@ class FinancingsourcesController extends AppController {
 		if ($user['role'] == 'salemanager' || $user['role'] == 'finance') {
 			if (in_array($this->action, array('edit', 'index', 'view','add','delete'))) {
 				return true;
+			}
 			}else{
-				
 					$this->Flash->error('You can not access here!');
 					$this->redirect($this->Auth->redirect());
-			}
 		}
 
 		return parent::isAuthorized($user);
